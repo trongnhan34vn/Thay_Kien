@@ -246,3 +246,17 @@ body {
   font-size: 0.875rem;
   line-height: 1.375;
 }
+
+
+.tabs-tab {
+  &.ui-active {
+    /* background-color: #111826; */
+    pointer-events: none;
+    font-weight: 600;
+    border-top: 3px solid #8a4d04;
+    border-left: 1px solid #8a4d04;
+    border-right: 1px solid #8a4d04;
+    border-radius: 5px 5px 0 0;
+    
+  }
+}
