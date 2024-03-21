@@ -1,23 +1,23 @@
 import { getCurrentUrl } from "../utils/utils.js";
 
-const basicUrl = "http://127.0.0.1:5500/src/pages";
+// const basicUrl = "http://127.0.0.1:5500/src/pages";
 
 const routers = [
   {
     title: "TRANG CHỦ",
-    link: "http://127.0.0.1:5500/index.html",
+    link: "/index.html",
   },
   {
     title: "SẢN PHẨM",
-    link: basicUrl + "/products.html",
+    link: "/products.html",
   },
   {
     title: "DỊCH VỤ",
-    link: basicUrl + "/services.html",
+    link: "/services.html",
   },
   {
     title: "LIÊN HỆ",
-    link: basicUrl + "/contact.html",
+    link: "/contact.html",
   },
 ]
 
