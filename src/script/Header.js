@@ -5,7 +5,7 @@ import { getCurrentUrl } from "../utils/utils.js";
 const routers = [
   {
     title: "TRANG CHỦ",
-    link: "/index.html",
+    link: "/",
   },
   {
     title: "SẢN PHẨM",
@@ -23,6 +23,7 @@ const routers = [
 
 const routerRender = (router) => {
   if (!router) return 'Error No Router'
+  // let result = getCurrentUrl().substring()
   let active = router.link === getCurrentUrl();
   if (active) {
     return `<li

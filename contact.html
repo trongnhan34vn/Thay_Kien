@@ -24,7 +24,7 @@
         <div
           class="max-w-[1500px] p w-full mx-auto flex header-flex layout-container py-1 px-[2rem] h-full flex items-start mx-auto">
 
-          <div class="logo w-2/5 pt-[0.5rem]">
+          <div onclick="goHome()" class="logo w-2/5 pt-[0.5rem] cursor-pointer">
             <img class="logo-img h-[4rem] w-[100%]" width="1070" height="144" src="/src/assets/images/logo.98b96fdb.png"
               alt="">
           </div>
@@ -309,7 +309,13 @@
   <script type="module" src="/src/script/Partners.js"></script>
   <script type="module" src="/src/script/infiniteSlider.js"></script>
   <script type="module" src="/src/script/collapse.js"></script>
+  <script src="/src/script/product.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function goHome() {
+      window.location.href = "/"
+    }
+  </script>
 </body>
 
 </html>
