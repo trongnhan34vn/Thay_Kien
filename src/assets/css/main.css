@@ -141,6 +141,22 @@ body {
   transition: transform 5s linear;
   gap: 2rem;
 }
+@media (max-width: 660px) {
+  .slider {
+    width: 100%;
+  }
+  .slider .slider-item {
+    border: none !important;
+  }
+
+  .slider .slider-list {
+    grid-auto-columns: 20%;
+  }
+  /* .slider .slider-item img{
+    border: none !important;
+  } */
+}
+
 @media (min-width: 576px) {
   .slider .slider-list {
     grid-auto-columns: 50%;

@@ -16,7 +16,7 @@ const images = [
 
 const renderSlideItem = (image, index) => {
   return `<div class="swiper-slide">
-  <img src="${image.src}" alt="ảnh ${index + 1}" />
+  <img class="w-full h-full" src="${image.src}" alt="ảnh ${index + 1}" />
 </div>`;
 }
 

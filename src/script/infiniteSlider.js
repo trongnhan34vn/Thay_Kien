@@ -32,7 +32,7 @@ class Slider {
   _getContainer() {
     this._container = this._element.querySelector(".slider-list")
     this._containerGap = getComputedStyle(this._container).gap
-    if(this._config.reverse) this._container.style.justifyContent = "end"
+    if(this._config.reverse) this._container.style.justifyContent = "center"
   }
   
   _getListItem() {

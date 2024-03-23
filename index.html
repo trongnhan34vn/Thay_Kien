@@ -11,35 +11,59 @@
   <!-- nonce="p63S8D8MTBW__TbE7-z6-Q" as="script" /> -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        },
+        screens: {
+          'tablet': {'max': '660px'} ,
+          // => @media (min-width: 640px) { ... }
+
+          'laptop': {'min': '660px', 'max': '910px'},
+          // => @media (min-width: 1024px) { ... }
+
+          'desktop': '1240px',
+          // => @media (min-width: 1280px) { ... }
+        },
+      }
+    }
+  </script>
 </head>
 
 <body>
   <div id="root">
     <!-- Header -->
-    <header class="transition-all duration-200 ease-in relative top-0 right-0 left-0 w-full max-h-[116px] z-[9999]"
+    <header class="transition-all duration-200 ease-in relative top-0 right-0 left-0 w-full max-h-[116px] tablet:max-h-full z-[9999]"
       id="header">
-      <div class="bg-white absolute top-0 w-full h-full z-10"></div>
-      <div class="relative header-container w-full z-20">
+      <div class="absolute top-0 z-10 w-full h-full bg-white tablet:hidden"></div>
+      <div class="relative z-20 w-full tablet:!bg-gradient-to-b tablet:!from-[#f25d19] tablet:!to-[#fad327] header-container">
         <div
-          class="max-w-[1500px] p w-full mx-auto flex header-flex layout-container py-1 px-[2rem] h-full flex items-start mx-auto">
+          class="max-w-[1500px] tablet:block w-full mx-auto header-flex layout-container py-1 px-[2rem]  h-full flex items-start">
 
-          <div onclick="goHome()" class="logo w-2/5 pt-[0.5rem] cursor-pointer">
-            <img class="logo-img h-[4rem] w-[100%]" width="1070" height="144" src="/src/assets/images/logo.98b96fdb.png"
+          <div onclick="goHome()" class="logo w-2/5 tablet:w-full pt-[0.5rem] cursor-pointer">
+            <img class="tablet:hidden logo-img h-[4rem] w-[100%]" width="1070" height="144" src="/src/assets/images/logo.98b96fdb.png"
               alt="">
+            <img class="tablet:h-16 hidden tablet:block tablet:mx-auto tablet:w-[80%]" src="/src/assets/images/logo-footer.4cc7d107 (1).png" alt="">
           </div>
-          <div class="flex-1 w-3/5 pl-20">
-            <div class="header-info gap-4 flex items-center pt-2">
-              <div class="flex items-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+          <div class="flex-1 w-3/5 pl-20 tablet:pl-0 tablet:w-full">
+            <div class="flex items-center gap-4 pt-2 tablet:gap-8 tablet:pt-3 tablet:pb-3 header-info">
+              <div class="flex items-center gap-2 ">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
                   <path
                     d="M15.9998 2.66663C8.64784 2.66663 2.6665 8.64796 2.6665 16V21.524C2.6665 22.8893 3.8625 24 5.33317 24H6.6665C7.02013 24 7.35926 23.8595 7.60931 23.6094C7.85936 23.3594 7.99984 23.0202 7.99984 22.6666V15.8093C7.99984 15.4557 7.85936 15.1165 7.60931 14.8665C7.35926 14.6164 7.02013 14.476 6.6665 14.476H5.45584C6.19717 9.31596 10.6372 5.33329 15.9998 5.33329C21.3625 5.33329 25.8025 9.31596 26.5438 14.476H25.3332C24.9795 14.476 24.6404 14.6164 24.3904 14.8665C24.1403 15.1165 23.9998 15.4557 23.9998 15.8093V24C23.9998 25.4706 22.8038 26.6666 21.3332 26.6666H18.6665V25.3333H13.3332V29.3333H21.3332C24.2745 29.3333 26.6665 26.9413 26.6665 24C28.1372 24 29.3332 22.8893 29.3332 21.524V16C29.3332 8.64796 23.3518 2.66663 15.9998 2.66663Z"
                     fill="white" />
                 </svg>
-                <p class="num-hotline text-white font-semibold text-2xl tracking-wider"> HOTLINE: 0796 39 58 68 </p>
+                <p class="text-2xl font-semibold tracking-wider text-white tablet:text-sm num-hotline">
+                  HOTLINE: 0796 39 58 68 </p>
 
               </div>
               <div class="bg-white flex-1 flex items-center w-full rounded px-[11px] py-1">
-                <span class="w-6 h-6 flex items-center">
+                <span class="flex items-center w-5 h-5">
                   <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 25 25"
                     fill="none">
                     <g clip-path="url(#clip0_42_1419)">
@@ -55,11 +79,11 @@
                   </svg>
                 </span>
 
-                <input class="w-full text-[14px] outline-none leading-[1.57]" placeholder="Tìm kiếm" type="text">
+                <input class="w-full tablet:leading-3 text-[14px] outline-none leading-[1.57]" placeholder="Tìm kiếm" type="text">
               </div>
             </div>
             <div class="nav-pages">
-              <ul id="routers" class="flex mx-auto pt-4 w-11/12 pb-[1.25rem] items-center justify-between">
+              <ul id="routers" class="flex mx-auto tablet:pt-[0.5rem] pt-4 w-11/12 pb-[0.75rem] items-center justify-between">
                 <!-- Routers Render By JS (/script/Header.js) -->
               </ul>
             </div>
@@ -70,43 +94,43 @@
     </header>
     <!-- Header -->
 
-    <div id="container">
-      <!-- Slider -->
-      <section id="slider-container" class="swiper mySwiper mb-[3rem]">
-        <div id="slider" class="swiper-wrapper">
-          <!-- Render Slider Item by JS (/script/Slider.js) -->
-        </div>
-        <div class="swiper-pagination"></div>
-      </section>
-      <!-- Slider -->
+    <!-- Slider -->
+    <section id="slider-container" class="swiper mySwiper mb-[3rem]">
+      <div id="slider" class="swiper-wrapper">
+        <!-- Render Slider Item by JS (/script/Slider.js) -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+    <!-- Slider -->
+    <div id="container" class="tablet:px-2">
 
       <!-- Advantages -->
-      <section id="advantages-container" class="max-w-[1500px] mx-auto mb-[3rem]">
+      <section id="advantages-container" class="max-w-[1500px] mx-auto mb-[3rem] tablet:mb-7">
         <div id="advantages"
-          class="rounded !border-[1px] block mx-auto bg-[#ffeea4] mb-12 border-[#895609] w-full h-28 flex items-center mb-[3rem]">
+          class="rounded !border-[1px] mx-auto bg-[#ffeea4] border-[#895609] w-full h-28 flex items-center">
           <!-- Render Advantage Items by JS (/script/Advantages.js) -->
         </div>
       </section>
       <!-- Advantages -->
-
+      <hr class="border-[#000] hidden tablet:block mb-7">
       <!-- About -->
       <section id="about-container" class="max-w-[1500px] mx-auto mb-[3rem]">
         <div class="flex gap-6">
-          <div class="w-1/2">
+          <div class="w-1/2 tablet:hidden">
             <img src="/src/assets/images/acquyhoaphat.dd8214a9.jpg" alt="">
           </div>
-          <div class="w-1/2">
-            <div class="flex gap-2 items-center">
+          <div class="w-1/2 tablet:w-full">
+            <div class="flex items-center gap-2">
               <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
-              <p class="text-[24px] text-[#8a4d04] text-center font-bold">VỀ CHÚNG TÔI</p>
+              <p class="text-[24px] tablet:text-sm text-[#8a4d04] text-center font-bold">VỀ CHÚNG TÔI</p>
               <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
             </div>
-            <div class="text-[20px] my-4">
-              <p><span class="text-[#8a4d04]">Ắc quy Thủ Đức:</span>chuyên cung cấp các sản phẩm ắc quy nội, ngoại nhập
+            <div class="text-[20px] tablet:text-sm my-4">
+              <p class="text-justify"><span class="text-[#8a4d04] font-semibold">Ắc quy Thủ Đức: </span>chuyên cung cấp các sản phẩm ắc quy nội, ngoại nhập
                 như: <span class="text-blue-700">GS, SEBANG,
                   DONGNAI, VARTA, AMARON, ENIMAC, ROCKET, DELKOR...</span></p>
-              <p>
-                Là một chi nhánh thuộc <span class="text-blue-700 font-semibold">Công ty TNHH TM-DV ắc quy Hòa
+              <p class="text-justify">
+                Là một chi nhánh thuộc <span class="font-semibold text-blue-700">Công ty TNHH TM-DV ắc quy Hòa
                   Phát</span>
                 với 13 chi nhánh trải dài khắp tp
                 HCM, ắc quy Thủ Đức luôn đặt mục tiêu "chất lượng hàng đầu - giá cả phải chăng - dịch vụ hoàn hảo" nhằm
@@ -126,103 +150,39 @@
       <!-- Recommend Products: Ắc quy oto -->
       <section id="car-battery-container" class="max-w-[1500px] mx-auto mb-[3rem]">
         <div class="header-recommend-product shadow-md flex items-center justify-between mb-[2rem] h-16 px-8">
-          <p class="text-white font-bold text-2xl">ẮC QUY Ô TÔ</p>
+          <p class="text-2xl font-bold text-white tablet:text-xl">ẮC QUY Ô TÔ</p>
           <div class="flex items-center">
-            <p class="text-[#895609] font-[600] text-xl mr-2">Xem tất cả</p>
+            <p class="text-[#895609] font-[600] text-xl tablet:text-lg mr-2">Xem tất cả</p>
             <img src="/src/assets/images/icon-arrow.2dea5fd3.png" alt="">
           </div>
         </div>
-        <div class="flex">
-          <div data-ui-tablist="ui-tabs" class="w-full max-w-[20.83%]" shown="category-1">
-            <div data-ui-tablist-tab="category-1" class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7">
-              <img class="object-cover w-full h-full" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
+        <div class="flex tablet:flex-col">
+          <div data-ui-tablist="ui-tabs" class="w-full max-w-[20.83%] tablet:mb-5 tablet:grid grid-cols-3 gap-4 tablet:object-contain tablet:max-w-full" shown="category-1">
+            <div data-ui-tablist-tab="category-1"
+              class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7 tablet:mb-0">
+              <img class="object-cover w-full h-full tablet:object-contain" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
             </div>
-            <div data-ui-tablist-tab="category-2" class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7">
-              <img class="object-cover w-full h-full" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
+            <div data-ui-tablist-tab="category-2"
+              class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7 tablet:mb-0">
+              <img class="object-cover w-full h-full tablet:object-contain" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
             </div>
-            <div data-ui-tablist-tab="category-3" class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7">
-              <img class="object-cover w-full h-full" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
+            <div data-ui-tablist-tab="category-3"
+              class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7 tablet:mb-0">
+              <img class="object-cover w-full h-full tablet:object-contain" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
             </div>
-            <div data-ui-tablist-tab="category-4" class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7">
-              <img class="object-cover w-full h-full" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
-            </div>
-          </div>
-          <div id="category-1" class="flex-1 px-4">
-            <div class="mx-auto grid grid-cols-3">
-              <div onclick="navigate()"
-                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
-                <div
-                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
-                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
-                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
-                  </div>
-                  <div
-                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
-                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
-                    <p class="text-base">(12V - 42AH)</p>
-                  </div>
-                  <div class="absolute"></div>
-                </div>
-              </div>
-              <div onclick="navigate()"
-                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
-                <div
-                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
-                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
-                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
-                  </div>
-                  <div
-                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
-                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
-                    <p class="text-base">(12V - 42AH)</p>
-                  </div>
-                  <div class="absolute"></div>
-                </div>
-              </div>
-              <div onclick="navigate()"
-                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
-                <div
-                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
-                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
-                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
-                  </div>
-                  <div
-                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
-                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
-                    <p class="text-base">(12V - 42AH)</p>
-                  </div>
-                  <div class="absolute"></div>
-                </div>
-              </div>
-              <div onclick="navigate()"
-                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
-                <div
-                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
-                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
-                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
-                  </div>
-                  <div
-                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
-                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
-                    <p class="text-base">(12V - 42AH)</p>
-                  </div>
-                  <div class="absolute"></div>
-                </div>
-              </div>
+            <div data-ui-tablist-tab="category-4"
+              class="category h-24 px-3 w-full border-[1px] cursor-pointer border-[#895609] overflow-hidden mb-7 tablet:mb-0">
+              <img class="object-cover w-full h-full tablet:object-contain" src="/src/assets/images/logo-sebang.057fa4cb.png" alt="">
             </div>
           </div>
-          <div id="category-2" class="flex-1 px-4" hidden>
-            <div class="mx-auto grid grid-cols-3">
+          <div id="category-1" class="flex-1 px-4 tablet:px-0">
+            <div class="grid grid-cols-3 mx-auto tablet:grid tablet:grid-cols-2">
               <div onclick="navigate()"
                 class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -238,7 +198,39 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
+                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
+                  </div>
+                  <div
+                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
+                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
+                    <p class="text-base">(12V - 42AH)</p>
+                  </div>
+                  <div class="absolute"></div>
+                </div>
+              </div>
+              <div onclick="navigate()"
+                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
+                <div
+                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
+                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
+                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
+                  </div>
+                  <div
+                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
+                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
+                    <p class="text-base">(12V - 42AH)</p>
+                  </div>
+                  <div class="absolute"></div>
+                </div>
+              </div>
+              <div onclick="navigate()"
+                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
+                <div
+                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
+                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -251,14 +243,30 @@
               </div>
             </div>
           </div>
-          <div id="category-3" class="flex-1 px-4" hidden>
-            <div class="mx-auto grid grid-cols-3">
+          <div id="category-2" class="flex-1 px-4 tablet:px-0" hidden>
+            <div class="grid grid-cols-3 mx-auto tablet:grid tablet:grid-cols-2">
               <div onclick="navigate()"
                 class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
+                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
+                  </div>
+                  <div
+                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
+                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
+                    <p class="text-base">(12V - 42AH)</p>
+                  </div>
+                  <div class="absolute"></div>
+                </div>
+              </div>
+              <div onclick="navigate()"
+                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
+                <div
+                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
+                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -271,14 +279,34 @@
               </div>
             </div>
           </div>
-          <div id="category-4" class="flex-1 px-4" hidden>
-            <div class="mx-auto grid grid-cols-3">
+          <div id="category-3" class="flex-1 px-4 tablet:px-0" hidden>
+            <div class="grid grid-cols-3 mx-auto tablet:grid tablet:grid-cols-2">
               <div onclick="navigate()"
                 class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
+                      src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
+                  </div>
+                  <div
+                    class="py-3 px-2 group-hover:bg-gradient-to-b group-hover:from-[#f25d19] group-hover:to-[#fad327] group-hover:text-[#fff] text-center text-[#8a4d04]">
+                    <p class="text-xl font-bold">ẮC QUY SEBANG SMF 44B19L</p>
+                    <p class="text-base">(12V - 42AH)</p>
+                  </div>
+                  <div class="absolute"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="category-4" class="flex-1 px-4 tablet:px-0" hidden>
+            <div class="grid grid-cols-3 mx-auto tablet:grid tablet:grid-cols-2">
+              <div onclick="navigate()"
+                class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
+                <div
+                  class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
+                  <div class="p-2 h-56 border-b-[1px] overflow-hidden">
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -294,7 +322,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -310,7 +338,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -330,21 +358,21 @@
       <!-- Recommend Products: Ắc quy xe máy -->
       <section id="car-battery-container" class="max-w-[1500px] mx-auto mb-[3rem]">
         <div class="header-recommend-product shadow-md flex items-center justify-between mb-[2rem] h-16 px-8">
-          <p class="text-white font-bold text-2xl">ẮC QUY XE MÁY</p>
+          <p class="text-2xl font-bold text-white tablet:text-xl">ẮC QUY XE MÁY</p>
           <div class="flex items-center">
-            <p class="text-[#895609] font-[600] text-xl mr-2">Xem tất cả</p>
+            <p class="text-[#895609] font-[600] text-xl tablet:text-lg mr-2">Xem tất cả</p>
             <img src="/src/assets/images/icon-arrow.2dea5fd3.png" alt="">
           </div>
         </div>
         <div class="flex">
-          <div class="flex-1 px-4">
-            <div class="mx-auto grid grid-cols-4">
+          <div class="flex-1 px-4 tablet:px-0">
+            <div class="grid grid-cols-4 mx-auto tablet:grid tablet:grid-cols-2">
               <div onclick="navigate()"
                 class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -360,7 +388,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -376,7 +404,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -392,7 +420,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -412,21 +440,21 @@
       <!-- Recommend Products: Phụ kiện -->
       <section id="car-battery-container" class="max-w-[1500px] mx-auto mb-[3rem]">
         <div class="header-recommend-product shadow-md flex items-center justify-between mb-[2rem] h-16 px-8">
-          <p class="text-white font-bold text-2xl">PHỤ KIỆN ẮC QUY</p>
+          <p class="text-2xl font-bold text-white tablet:text-xl">PHỤ KIỆN ẮC QUY</p>
           <div class="flex items-center">
-            <p class="text-[#895609] font-[600] text-xl mr-2">Xem tất cả</p>
+            <p class="text-[#895609] font-[600] tablet:text-lg text-xl mr-2">Xem tất cả</p>
             <img src="/src/assets/images/icon-arrow.2dea5fd3.png" alt="">
           </div>
         </div>
         <div class="flex">
-          <div class="flex-1 px-4">
-            <div class="mx-auto grid grid-cols-4">
+          <div class="flex-1 px-4 tablet:px-0">
+            <div class="grid grid-cols-4 mx-auto tablet:grid tablet:grid-cols-2">
               <div onclick="navigate()"
                 class="relative transition-all duration-150 ease-in border-[4px] border-opacity-100 hover:rounded hover:border-[#f93] cursor-pointer group mx-3 border-[transparent] max-w-[33,33%] mb-8">
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -442,7 +470,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -458,7 +486,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -474,7 +502,7 @@
                 <div
                   class="transition-all duration-150 ease-in border-[1px] group-hover:border-none shadow-md border-[#895609]">
                   <div class="p-2 h-56 border-b-[1px] overflow-hidden">
-                    <img class="group-hover:scale-110 transition-all duration-150 ease-in w-full h-full"
+                    <img class="w-full h-full transition-all duration-150 ease-in group-hover:scale-110"
                       src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                   </div>
                   <div
@@ -494,27 +522,27 @@
       <!-- Hình ảnh -->
       <section class="max-w-[1500px] mx-auto mb-[3rem]">
 
-        <div class="flex gap-3 items-center justify-center w-1/2 mx-auto mb-10">
+        <div class="flex items-center justify-center w-1/2 gap-3 mx-auto mb-10 tablet:w-full">
           <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
-          <p class="text-[24px] text-[#8a4d04] text-center font-bold">HÌNH ẢNH</p>
+          <p class="text-[24px] text-[#8a4d04] text-center font-bold tablet:text-lg">HÌNH ẢNH</p>
           <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
         </div>
 
         <div class="flex gap-4">
-          <div class="max-w-[41.6%] h-[45rem]">
+          <div class="max-w-[41.6%] h-[45rem] tablet:h-full">
             <img class="w-full h-full" src="/src/assets/images/imgHouse-full.2d84caa5.jpg" alt="">
           </div>
-          <div class="flex-1 h-[45rem]">
-            <div class="grid-cols-2 grid pb-4 h-1/2">
+          <div class="flex-1 h-[45rem] tablet:h-full">
+            <div class="grid grid-cols-2 pb-4 h-1/2 tablet:h-full">
               <img class="object-cover h-full" src="/src/assets/images/acquyhoaphat.dd8214a9 (2).jpg" alt="">
               <img class="object-cover h-full" src="/src/assets/images/image_1.ce4acfe6.png" alt="">
             </div>
-            <div class="grid grid-cols-3 h-1/2">
+            <div class="grid grid-cols-3 h-1/2 tablet:h-full tablet:grid-cols-2">
               <img class="w-full h-full object-contian border-[1px]" src="/src/assets/images/image_1.ce4acfe6.png"
                 alt="">
               <img class="w-full h-full object-contian border-[1px]" src="/src/assets/images/image_1.ce4acfe6.png"
                 alt="">
-              <img class="w-full h-full object-contian border-[1px]" src="/src/assets/images/image_1.ce4acfe6.png"
+              <img class="w-full h-full object-contian tablet:hidden border-[1px]" src="/src/assets/images/image_1.ce4acfe6.png"
                 alt="">
             </div>
           </div>
@@ -525,9 +553,9 @@
       <!-- Đối tác -->
       <section class="max-w-[1500px] mx-auto mb-[3rem]">
 
-        <div class="flex gap-3 items-center justify-center w-1/2 mx-auto mb-10">
+        <div class="flex items-center justify-center w-1/2 gap-3 mx-auto mb-10 tablet:w-full">
           <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
-          <p class="text-[24px] text-[#8a4d04] text-center font-bold">ĐỐI TÁC</p>
+          <p class="text-[24px] tablet:text-lg text-[#8a4d04] text-center font-bold">ĐỐI TÁC</p>
           <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
         </div>
         <div class="w-full">
@@ -567,7 +595,7 @@
     <!-- Footer -->
     <footer class="px-[2rem] pt-[2.5rem] pb-[1.5rem]" id="footer">
       <div class="max-w-[1500px] mx-auto">
-        <div class=" flex items-start gap-4">
+        <div class="flex items-start gap-4 ">
           <div class="flex-1">
             <div class="">
               <img class="mb-4" src="/src/assets/images/logo-footer.4cc7d107.png" alt="">
@@ -576,19 +604,19 @@
               <!-- Render by JS (/script/Footer.js) -->
             </div>
           </div>
-          <div class="max-w-[25%] flex-[0_0_25%]">
-            <div class="mx-auto w-4/5">
-              <h3 class="mb-4 text-[20px] text-white font-bold">DANH MỤC SẢN PHẨM</h3>
+          <div class="max-w-[25%] flex-[0_0_25%] tablet:flex-1 tablet:max-w-full">
+            <div class="w-4/5 mx-auto">
+              <h3 class="mb-4 text-[20px] text-sm text-white font-bold">DANH MỤC SẢN PHẨM</h3>
               <div id="categories">
                 <!-- Render by JS (/script/Footer.js) -->
               </div>
             </div>
           </div>
-          <div>
+          <div class="tablet:hidden">
             <h3 class="mb-4 text-[20px] text-white font-bold">BẢN ĐỒ</h3>
             <div class="flex flex-row wrap">
-              <div class="ant-col h-56 ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw flex">
-                <img class="h-full flex-1 w-full object-cover" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
+              <div class="flex h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
+                <img class="flex-1 object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
 
               </div>
               <div class="ant-col ant-col-xs-14 ant-col-sm-14 ant-col-md-14 ant-col-lg-16 css-txh9fw">
@@ -601,7 +629,22 @@
           </div>
 
         </div>
-        <div class="footer-copy-right layout-container text-center text-white font-medium w-full pt-4 mt-7">Bản quyền ©
+        <div class="hidden tablet:block">
+          <h3 class="mb-4 text-[20px] text-white font-bold">BẢN ĐỒ</h3>
+          <div class="flex flex-row wrap">
+            <div class="flex h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
+              <img class="flex-1 object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
+
+            </div>
+            <div class="ant-col ant-col-xs-14 ant-col-sm-14 ant-col-md-14 ant-col-lg-16 css-txh9fw">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.476102798515!2d106.77527661428758!3d10.851346760774803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752773430a7fb7%3A0x988988ca49c791bf!2zODI4IFhMIEjDoCBO4buZaSwgSGnhu4dwIFBow7osIFF14bqtbiA5LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1665647982755!5m2!1svi!2s"
+                width="100%" loading="lazy" class="h-56" referrerpolicy="no-referrer-when-downgrade"
+                title="ThuDucBatteryMap"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="w-full pt-4 font-medium text-center text-white footer-copy-right layout-container mt-7">Bản quyền ©
           2023 .<h2 class="inline-block">CỬA HÀNG ẮC QUY THỦ ĐỨC</h2>
         </div>
       </div>
@@ -617,7 +660,7 @@
   <script type="module" src="/src/script/infiniteSlider.js"></script>
   <script type="module" src="/src/script/tabs.js"></script>
   <script src="/src/script/product.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script type="text/tailwindcss" src="tailwind.config.js"></script> -->
 
   <script>
     function goHome() {

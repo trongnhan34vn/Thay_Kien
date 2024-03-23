@@ -17,10 +17,10 @@ const contactMethods = [
 
 const renderCrontactMethod = (method) => {
   return `<div class="flex items-start mt-2">
-  <span class="w-[2.5rem] h-[2rem] flex items-center">
+  <span class="w-[2.5rem] tablet:mt-2 tablet:mr-2 h-[2rem] tablet:w-[0.75rem] tablet:h-[0.75rem] flex items-center">
     ${method.icon}
   </span>
-  <p class="text-[20px] text-white pt-1">
+  <p class="text-[20px] tablet:text-sm text-white pt-1">
     ${method.content}
   </p>
 </div>`
@@ -44,7 +44,7 @@ const categories = [
 ]
 
 const renderCategoryElement = (category) => {
-  return `<p class="text-white text-[20px] mb-2">${category}</p>`
+  return `<p class="text-white text-[20px] tablet:text-sm mb-2">${category}</p>`
 }
 
 const renderCategories = () => {
