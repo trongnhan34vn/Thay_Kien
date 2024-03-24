@@ -28,7 +28,7 @@
           'laptop': { 'min': '660px', 'max': '910px' },
           // => @media (min-width: 1024px) { ... }
 
-          'desktop': {'min': '910px', 'max': '1280px '},
+          'desktop': { 'min': '910px', 'max': '1280px ' },
           // => @media (min-width: 1280px) { ... }
         },
       }
@@ -54,16 +54,17 @@
             <img class="tablet:h-16 hidden tablet:block tablet:mx-auto tablet:w-[80%]"
               src="/src/assets/images/logo-footer.4cc7d107 (1).png" alt="">
           </div>
-          <div class="flex-1 w-3/5 pl-20 tablet:pl-0 tablet:w-full">
-            <div class="flex items-center gap-4 pt-2 tablet:gap-8 tablet:pt-3 tablet:pb-3 header-info">
-              <div class="flex items-center gap-2 ">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"
+          <div class="flex-1 w-3/5 pl-20 tablet:pl-0 desktop:pl-16 laptop:pl-16 tablet:w-full">
+            <div class="flex items-center gap-4 pt-2 laptop:gap-2 tablet:gap-8 tablet:pt-3 tablet:pb-3 header-info">
+              <div class="flex items-center gap-2 laptop:gap-1 ">
+                <svg class="w-6 h-6 laptop:w-5 laptop:h-5 s-laptop:w-5 s-laptop:h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"
                   fill="none">
                   <path
                     d="M15.9998 2.66663C8.64784 2.66663 2.6665 8.64796 2.6665 16V21.524C2.6665 22.8893 3.8625 24 5.33317 24H6.6665C7.02013 24 7.35926 23.8595 7.60931 23.6094C7.85936 23.3594 7.99984 23.0202 7.99984 22.6666V15.8093C7.99984 15.4557 7.85936 15.1165 7.60931 14.8665C7.35926 14.6164 7.02013 14.476 6.6665 14.476H5.45584C6.19717 9.31596 10.6372 5.33329 15.9998 5.33329C21.3625 5.33329 25.8025 9.31596 26.5438 14.476H25.3332C24.9795 14.476 24.6404 14.6164 24.3904 14.8665C24.1403 15.1165 23.9998 15.4557 23.9998 15.8093V24C23.9998 25.4706 22.8038 26.6666 21.3332 26.6666H18.6665V25.3333H13.3332V29.3333H21.3332C24.2745 29.3333 26.6665 26.9413 26.6665 24C28.1372 24 29.3332 22.8893 29.3332 21.524V16C29.3332 8.64796 23.3518 2.66663 15.9998 2.66663Z"
                     fill="white" />
                 </svg>
-                <p class="text-2xl font-semibold tracking-wider text-white desktop:text-xl tablet:text-sm num-hotline">
+                <p
+                  class="text-2xl font-semibold tracking-wider text-white s-laptop:text-base laptop:text-base desktop:text-xl tablet:text-sm num-hotline">
                   HOTLINE: 0796 39 58 68 </p>
 
               </div>
@@ -90,7 +91,7 @@
             </div>
             <div class="nav-pages">
               <ul id="routers"
-                class="flex mx-auto tablet:pt-[0.5rem] pt-4 w-11/12 pb-[0.75rem] items-center justify-between">
+                class="flex mx-auto tablet:pt-[0.5rem] pt-4 w-11/12 laptop:w-full pb-[0.75rem] items-center justify-between">
                 <!-- Routers Render By JS (/script/Header.js) -->
               </ul>
             </div>
@@ -115,37 +116,37 @@
         <div class="flex-1">
           <div
             class="text-[#8a4d04] tablet:text-lg text-2xl flex items-center border-b-[1px] border-b-[#8a4d04] pb-4 mb-10 tablet:mb-5">
-            <p class=""><span class="text-xl tablet:text-lg">SẢN PHẨM</span> <span class="px-2">/</span> <span
-                class="font-semibold">BÌNH ẮC QUY NS60LS (12V - 45AH)</span></p>
+            <p class=""><span class="text-xl laptop:text-lg tablet:text-lg">SẢN PHẨM</span> <span class="px-2">/</span> <span
+                class="font-semibold laptop:text-lg">BÌNH ẮC QUY NS60LS (12V - 45AH)</span></p>
           </div>
-          <div class="flex gap-10 mb-20 tablet:block">
+          <div class="flex gap-10 mb-20 laptop:block tablet:block">
             <div
-              class="w-1/2 transition-all duration-150 ease-in cursor-pointer tablet:mb-5 tablet:w-full hover:opacity-75">
+              class="w-1/2 transition-all duration-150 ease-in cursor-pointer laptop:mb-5 laptop:w-full tablet:mb-5 tablet:w-full hover:opacity-75">
               <img src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
             </div>
             <div class="flex-1 w-full">
               <div class="mb-10">
-                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 laptop:text-lg tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Mã sản phẩm:</p>
                   <p>ẮC QUY GS NS60LS</p>
                 </div>
-                <div class="px-6 py-3 tablet:text-lg text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 laptop:text-lg tablet:text-lg text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Hãng sản xuất:</p>
                   <p>GS Battery VietNam</p>
                 </div>
-                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 laptop:text-lg tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Tình trạng hàng:</p>
                   <p>Mới 100%</p>
                 </div>
-                <div class="px-6 py-3 tablet:text-lg text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 laptop:text-lg tablet:text-lg text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Xuất xứ:</p>
                   <p>Việt Nam</p>
                 </div>
-                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 laptop:text-lg tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Bảo hành:</p>
                   <p>6 tháng</p>
                 </div>
-                <div class="px-6 py-3 tablet:text-lg text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 laptop:text-lg tablet:text-lg text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Kích thước:</p>
                   <p>238*129*202</p>
                 </div>
@@ -155,7 +156,7 @@
                 </div>
               </div>
               <div class="flex justify-end">
-                <button class="py-3 text-xl tablet:text-lg rounded text-[#fff] px-16 bg-gradient-to-b from-[#f25d19] to-[#fad327]">LIÊN
+                <button class="py-3 laptop:text-lg text-xl tablet:text-lg rounded text-[#fff] px-16 bg-gradient-to-b from-[#f25d19] to-[#fad327]">LIÊN
                   HỆ</button>
               </div>
 
@@ -164,9 +165,9 @@
           </div>
           <div>
             <div data-ui-tablist="ui-tabs" class="tabs px-14 border-b-[1px] border-[#8a4d04]">
-              <button data-ui-tablist-tab="log-in" class="tabs-tab  tablet:text-lg text-xl text-[#8a4d04] px-8 py-3 ">Mô
+              <button data-ui-tablist-tab="log-in" class="tabs-tab laptop:text-lg  tablet:text-lg text-xl text-[#8a4d04] px-8 py-3 ">Mô
                 tả sản phẩm</button>
-              <button data-ui-tablist-tab="sign-up" class="tabs-tab  tablet:text-lg text-xl text-[#8a4d04] px-8 py-3 ">Hình
+              <button data-ui-tablist-tab="sign-up" class="tabs-tab laptop:text-lg  tablet:text-lg text-xl text-[#8a4d04] px-8 py-3 ">Hình
                 ảnh/Video</button>
             </div>
             <div id="log-in" class="p-4 tabs-tabpanel auth-form">
@@ -256,20 +257,20 @@
           </div>
         </div>
 
-        <div class="w-1/4 tablet:w-full max-w-1/4">
+        <div class="w-1/4 tablet:w-full max-w-1/4 laptop:w-1/3 laptop:max-w-1/3">
           <!-- Category -->
           <div class="rounded border-[1px] w-full shadow-md mb-7">
             <div class="text-[#8a4d04] bg-[#ffeea4] font-semibold border-b-[1px] px-4 py-3 text-center">
-              <p class="text-xl tablet:text-lg">DANH MỤC SẢN PHẨM</p>
+              <p class="text-xl laptop:text-lg tablet:text-lg">DANH MỤC SẢN PHẨM</p>
             </div>
             <div>
               <button data-ui-toggle="my-collapse-1"
-                class="flex justify-between tablet:text-sm items-center w-full p-3 border-b-[1px]">
+                class="flex justify-between tablet:text-sm laptop:text-sm items-center w-full p-3 border-b-[1px]">
                 ẮC QUY NỘI ĐỊA
                 <i class="fa-solid fa-angle-right"></i>
               </button>
               <div data-ui-collapse data-ui-transition-name="collapse" id="my-collapse-1" shown>
-                <div class="collapse-content tablet:text-sm p-4 border-b-[1px]">
+                <div class="collapse-content tablet:text-sm laptop:text-sm p-4 border-b-[1px]">
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS KHÔ</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS NƯỚC</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS XE MÁY</p>
@@ -280,12 +281,12 @@
               </div>
 
               <button data-ui-toggle="my-collapse-2"
-                class="flex justify-between tablet:text-sm items-center w-full p-3 border-b-[1px]">
+                class="flex justify-between laptop:text-sm tablet:text-sm items-center w-full p-3 border-b-[1px]">
                 ẮC QUY NỘI ĐỊA
                 <i class="fa-solid fa-angle-right"></i>
               </button>
               <div data-ui-collapse data-ui-transition-name="collapse" id="my-collapse-2" shown>
-                <div class="collapse-content tablet:text-sm p-4 border-b-[1px]">
+                <div class="collapse-content tablet:text-sm laptop:text-sm p-4 border-b-[1px]">
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS KHÔ</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS NƯỚC</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS XE MÁY</p>
@@ -296,12 +297,12 @@
               </div>
 
               <button data-ui-toggle="my-collapse-3"
-                class="flex tablet:text-sm justify-between items-center w-full p-3 border-b-[1px]">
+                class="flex tablet:text-sm justify-between laptop:text-sm items-center w-full p-3 border-b-[1px]">
                 ẮC QUY NỘI ĐỊA
                 <i class="fa-solid fa-angle-right"></i>
               </button>
               <div data-ui-collapse data-ui-transition-name="collapse" id="my-collapse-3" shown>
-                <div class="collapse-content tablet:text-sm p-4 border-b-[1px]">
+                <div class="collapse-content laptop:text-sm tablet:text-sm p-4 border-b-[1px]">
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS KHÔ</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS NƯỚC</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS XE MÁY</p>
@@ -317,12 +318,12 @@
           <!-- New Product -->
           <div class="rounded border-[1px] w-full shadow-md tablet:mb-10">
             <div class="text-[#8a4d04] bg-[#ffeea4] font-semibold border-b-[1px] px-4 py-3 text-center">
-              <p class="text-xl tablet:text-lg">SẢN PHẨM MỚI NHẤT</p>
+              <p class="text-xl laptop:text-lg tablet:text-lg">SẢN PHẨM MỚI NHẤT</p>
             </div>
             <div>
               <div onclick="navigate()"
                 class="flex items-center w-full gap-4 p-3 duration-150 bg-white border-b border-solid cursor-pointer hover:bg-gray-200">
-                <div class="flex-1 tablet:flex-none tablet:w-1/3">
+                <div class="w-1/3 tablet:flex-none tablet:w-1/3">
                   <img class="border-[1px]" src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                 </div>
                 <div class="text-[#8a4d04]">
@@ -332,7 +333,7 @@
               </div>
               <div onclick="navigate()"
                 class="flex items-center w-full gap-4 p-3 duration-150 bg-white border-b border-solid cursor-pointer hover:bg-gray-200">
-                <div class="flex-1 tablet:flex-none tablet:w-1/3">
+                <div class="w-1/3 tablet:flex-none tablet:w-1/3">
                   <img class="border-[1px]" src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                 </div>
                 <div class="text-[#8a4d04]">
@@ -342,7 +343,7 @@
               </div>
               <div onclick="navigate()"
                 class="flex items-center w-full gap-4 p-3 duration-150 bg-white border-b border-solid cursor-pointer hover:bg-gray-200">
-                <div class="flex-1 tablet:flex-none tablet:w-1/3">
+                <div class="w-1/3 tablet:flex-none tablet:w-1/3">
                   <img class="border-[1px]" src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                 </div>
                 <div class="text-[#8a4d04]">
@@ -416,20 +417,21 @@
               <!-- Render by JS (/script/Footer.js) -->
             </div>
           </div>
-          <div class="max-w-[25%] flex-[0_0_25%] tablet:flex-1 tablet:max-w-full">
+          <div class="max-w-[25%] flex-[0_0_25%] laptop:flex-1 laptop:max-w-full" tablet:flex-1 tablet:max-w-full">
             <div class="w-4/5 mx-auto">
-              <h3 class="mb-4 text-[20px] desktop:text-lg text-xl tablet:text-sm text-white font-bold">DANH MỤC SẢN PHẨM</h3>
+              <h3 class="mb-4 text-[20px] desktop:text-lg text-xl laptop:text-lg tablet:text-sm text-white font-bold">
+                DANH MỤC SẢN PHẨM
+              </h3>
               <div id="categories">
                 <!-- Render by JS (/script/Footer.js) -->
               </div>
             </div>
           </div>
-          <div class="tablet:hidden">
+          <div class="tablet:hidden laptop:hidden">
             <h3 class="mb-4 text-[20px] desktop:text-lg text-white font-bold">BẢN ĐỒ</h3>
             <div class="flex flex-row wrap">
               <div class="flex h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
-                <img class="flex-1 object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
-
+                <img class="object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
               </div>
               <div class="ant-col ant-col-xs-14 ant-col-sm-14 ant-col-md-14 ant-col-lg-16 css-txh9fw">
                 <iframe
@@ -441,14 +443,14 @@
           </div>
 
         </div>
-        <div class="hidden tablet:block">
-          <h3 class="mb-4 text-[20px] desktop:text-lg text-white font-bold">BẢN ĐỒ</h3>
+        <div class="hidden laptop:mt-3 tablet:block laptop:block">
+          <h3 class="mb-4 text-[20px] desktop:text-lg laptop:text-lg text-white font-bold">BẢN ĐỒ</h3>
           <div class="flex flex-row wrap">
-            <div class="flex h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
-              <img class="flex-1 object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
-
+            <div class="flex w-full h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
+              <img class="flex-1 object-cover w-full h-full laptop:object-fill"
+                src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
             </div>
-            <div class="ant-col ant-col-xs-14 ant-col-sm-14 ant-col-md-14 ant-col-lg-16 css-txh9fw">
+            <div class="w-full ant-col ant-col-xs-14 ant-col-sm-14 ant-col-md-14 ant-col-lg-16 css-txh9fw">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.476102798515!2d106.77527661428758!3d10.851346760774803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752773430a7fb7%3A0x988988ca49c791bf!2zODI4IFhMIEjDoCBO4buZaSwgSGnhu4dwIFBow7osIFF14bqtbiA5LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1665647982755!5m2!1svi!2s"
                 width="100%" loading="lazy" class="h-56" referrerpolicy="no-referrer-when-downgrade"
