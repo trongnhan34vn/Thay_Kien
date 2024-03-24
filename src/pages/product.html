@@ -22,13 +22,13 @@
           }
         },
         screens: {
-          'tablet': {'max': '660px'} ,
+          'tablet': { 'max': '660px' },
           // => @media (min-width: 640px) { ... }
 
-          'laptop': {'min': '660px', 'max': '910px'},
+          'laptop': { 'min': '660px', 'max': '910px' },
           // => @media (min-width: 1024px) { ... }
 
-          'desktop': '1240px',
+          'desktop': {'min': '910px', 'max': '1280px '},
           // => @media (min-width: 1280px) { ... }
         },
       }
@@ -39,27 +39,31 @@
 <body>
   <div id="root">
     <!-- Header -->
-    <header class="transition-all duration-200 ease-in relative top-0 right-0 left-0 w-full max-h-[116px] tablet:max-h-full z-[9999]"
+    <header
+      class="transition-all duration-200 ease-in relative top-0 right-0 left-0 w-full max-h-[116px] tablet:max-h-full z-[9999]"
       id="header">
       <div class="absolute top-0 z-10 w-full h-full bg-white tablet:hidden"></div>
-      <div class="relative z-20 w-full tablet:!bg-gradient-to-b tablet:!from-[#f25d19] tablet:!to-[#fad327] header-container">
+      <div
+        class="relative z-20 w-full tablet:!bg-gradient-to-b tablet:!from-[#f25d19] tablet:!to-[#fad327] header-container">
         <div
           class="max-w-[1500px] tablet:block w-full mx-auto header-flex layout-container py-1 px-[2rem]  h-full flex items-start">
 
           <div onclick="goHome()" class="logo w-2/5 tablet:w-full pt-[0.5rem] cursor-pointer">
-            <img class="tablet:hidden logo-img h-[4rem] w-[100%]" width="1070" height="144" src="/src/assets/images/logo.98b96fdb.png"
-              alt="">
-            <img class="tablet:h-16 hidden tablet:block tablet:mx-auto tablet:w-[80%]" src="/src/assets/images/logo-footer.4cc7d107 (1).png" alt="">
+            <img class="tablet:hidden logo-img h-[4rem] w-[100%]" width="1070" height="144"
+              src="/src/assets/images/logo.98b96fdb.png" alt="">
+            <img class="tablet:h-16 hidden tablet:block tablet:mx-auto tablet:w-[80%]"
+              src="/src/assets/images/logo-footer.4cc7d107 (1).png" alt="">
           </div>
           <div class="flex-1 w-3/5 pl-20 tablet:pl-0 tablet:w-full">
             <div class="flex items-center gap-4 pt-2 tablet:gap-8 tablet:pt-3 tablet:pb-3 header-info">
               <div class="flex items-center gap-2 ">
-                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" fill="none">
+                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"
+                  fill="none">
                   <path
                     d="M15.9998 2.66663C8.64784 2.66663 2.6665 8.64796 2.6665 16V21.524C2.6665 22.8893 3.8625 24 5.33317 24H6.6665C7.02013 24 7.35926 23.8595 7.60931 23.6094C7.85936 23.3594 7.99984 23.0202 7.99984 22.6666V15.8093C7.99984 15.4557 7.85936 15.1165 7.60931 14.8665C7.35926 14.6164 7.02013 14.476 6.6665 14.476H5.45584C6.19717 9.31596 10.6372 5.33329 15.9998 5.33329C21.3625 5.33329 25.8025 9.31596 26.5438 14.476H25.3332C24.9795 14.476 24.6404 14.6164 24.3904 14.8665C24.1403 15.1165 23.9998 15.4557 23.9998 15.8093V24C23.9998 25.4706 22.8038 26.6666 21.3332 26.6666H18.6665V25.3333H13.3332V29.3333H21.3332C24.2745 29.3333 26.6665 26.9413 26.6665 24C28.1372 24 29.3332 22.8893 29.3332 21.524V16C29.3332 8.64796 23.3518 2.66663 15.9998 2.66663Z"
                     fill="white" />
                 </svg>
-                <p class="text-2xl font-semibold tracking-wider text-white tablet:text-sm num-hotline">
+                <p class="text-2xl font-semibold tracking-wider text-white desktop:text-xl tablet:text-sm num-hotline">
                   HOTLINE: 0796 39 58 68 </p>
 
               </div>
@@ -80,11 +84,13 @@
                   </svg>
                 </span>
 
-                <input class="w-full tablet:leading-3 text-[14px] outline-none leading-[1.57]" placeholder="Tìm kiếm" type="text">
+                <input class="w-full tablet:leading-3 text-[14px] outline-none leading-[1.57]" placeholder="Tìm kiếm"
+                  type="text">
               </div>
             </div>
             <div class="nav-pages">
-              <ul id="routers" class="flex mx-auto tablet:pt-[0.5rem] pt-4 w-11/12 pb-[0.75rem] items-center justify-between">
+              <ul id="routers"
+                class="flex mx-auto tablet:pt-[0.5rem] pt-4 w-11/12 pb-[0.75rem] items-center justify-between">
                 <!-- Routers Render By JS (/script/Header.js) -->
               </ul>
             </div>
@@ -105,49 +111,51 @@
       </section>
       <!-- Slider -->
 
-      <div class="flex max-w-[1500px] mx-auto gap-9 mb-[3rem]">
+      <div class="flex tablet:block px-[1rem] max-w-[1500px] mx-auto gap-9 mb-[3rem] tablet:px-2">
         <div class="flex-1">
-          <div class="text-[#8a4d04] text-2xl flex items-center border-b-[1px] border-b-[#8a4d04] pb-4 mb-10">
-            <p class=""><span class="text-xl">SẢN PHẨM</span> <span class="px-2">/</span> <span
+          <div
+            class="text-[#8a4d04] tablet:text-lg text-2xl flex items-center border-b-[1px] border-b-[#8a4d04] pb-4 mb-10 tablet:mb-5">
+            <p class=""><span class="text-xl tablet:text-lg">SẢN PHẨM</span> <span class="px-2">/</span> <span
                 class="font-semibold">BÌNH ẮC QUY NS60LS (12V - 45AH)</span></p>
           </div>
-          <div class="flex gap-10 mb-20">
-            <div class="w-1/2 transition-all duration-150 ease-in cursor-pointer hover:opacity-75">
+          <div class="flex gap-10 mb-20 tablet:block">
+            <div
+              class="w-1/2 transition-all duration-150 ease-in cursor-pointer tablet:mb-5 tablet:w-full hover:opacity-75">
               <img src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
             </div>
             <div class="flex-1 w-full">
               <div class="mb-10">
-                <div class="px-6 py-3 bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Mã sản phẩm:</p>
                   <p>ẮC QUY GS NS60LS</p>
                 </div>
-                <div class="px-6 py-3 text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Hãng sản xuất:</p>
                   <p>GS Battery VietNam</p>
                 </div>
-                <div class="px-6 py-3 bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Tình trạng hàng:</p>
                   <p>Mới 100%</p>
                 </div>
-                <div class="px-6 py-3 text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Xuất xứ:</p>
                   <p>Việt Nam</p>
                 </div>
-                <div class="px-6 py-3 bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Bảo hành:</p>
                   <p>6 tháng</p>
                 </div>
-                <div class="px-6 py-3 text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Kích thước:</p>
                   <p>238*129*202</p>
                 </div>
-                <div class="px-6 py-3 bg-[#fff1b1] text-[#8a4d04] text-xl flex">
+                <div class="px-6 py-3 tablet:text-lg bg-[#fff1b1] text-[#8a4d04] text-xl flex">
                   <p class="w-5/12">Liên hệ:</p>
                   <p>0796 39 58 68 (Mr. Đồng)</p>
                 </div>
               </div>
               <div class="flex justify-end">
-                <button class="py-3 text-xl rounded text-[#fff] px-16 bg-gradient-to-b from-[#f25d19] to-[#fad327]">LIÊN
+                <button class="py-3 text-xl tablet:text-lg rounded text-[#fff] px-16 bg-gradient-to-b from-[#f25d19] to-[#fad327]">LIÊN
                   HỆ</button>
               </div>
 
@@ -156,13 +164,13 @@
           </div>
           <div>
             <div data-ui-tablist="ui-tabs" class="tabs px-14 border-b-[1px] border-[#8a4d04]">
-              <button data-ui-tablist-tab="log-in" class="tabs-tab text-xl text-[#8a4d04] px-8 py-3 ">Mô
+              <button data-ui-tablist-tab="log-in" class="tabs-tab  tablet:text-lg text-xl text-[#8a4d04] px-8 py-3 ">Mô
                 tả sản phẩm</button>
-              <button data-ui-tablist-tab="sign-up" class="tabs-tab text-xl text-[#8a4d04] px-8 py-3 ">Hình
+              <button data-ui-tablist-tab="sign-up" class="tabs-tab  tablet:text-lg text-xl text-[#8a4d04] px-8 py-3 ">Hình
                 ảnh/Video</button>
             </div>
             <div id="log-in" class="p-4 tabs-tabpanel auth-form">
-              <div class="text-base">
+              <div class="mb-5 text-base text-justify">
                 <div>
                   <div>- <span style="color: rgb(41, 105, 176);"><strong>GS BATTERY</strong></span> là Công ty 100% vốn
                     nước ngoài liên doanh giữa Tập đoàn GS – YUASA và Tập đoàn MITSUBISHI – Tập đoàn thương mại lớn nhất
@@ -248,20 +256,20 @@
           </div>
         </div>
 
-        <div class="w-1/4 max-w-1/4">
+        <div class="w-1/4 tablet:w-full max-w-1/4">
           <!-- Category -->
           <div class="rounded border-[1px] w-full shadow-md mb-7">
             <div class="text-[#8a4d04] bg-[#ffeea4] font-semibold border-b-[1px] px-4 py-3 text-center">
-              <p class="text-xl">DANH MỤC SẢN PHẨM</p>
+              <p class="text-xl tablet:text-lg">DANH MỤC SẢN PHẨM</p>
             </div>
             <div>
               <button data-ui-toggle="my-collapse-1"
-                class="flex justify-between items-center w-full p-3 border-b-[1px]">
+                class="flex justify-between tablet:text-sm items-center w-full p-3 border-b-[1px]">
                 ẮC QUY NỘI ĐỊA
                 <i class="fa-solid fa-angle-right"></i>
               </button>
               <div data-ui-collapse data-ui-transition-name="collapse" id="my-collapse-1" shown>
-                <div class="collapse-content p-4 border-b-[1px]">
+                <div class="collapse-content tablet:text-sm p-4 border-b-[1px]">
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS KHÔ</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS NƯỚC</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS XE MÁY</p>
@@ -272,12 +280,12 @@
               </div>
 
               <button data-ui-toggle="my-collapse-2"
-                class="flex justify-between items-center w-full p-3 border-b-[1px]">
+                class="flex justify-between tablet:text-sm items-center w-full p-3 border-b-[1px]">
                 ẮC QUY NỘI ĐỊA
                 <i class="fa-solid fa-angle-right"></i>
               </button>
               <div data-ui-collapse data-ui-transition-name="collapse" id="my-collapse-2" shown>
-                <div class="collapse-content p-4 border-b-[1px]">
+                <div class="collapse-content tablet:text-sm p-4 border-b-[1px]">
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS KHÔ</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS NƯỚC</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS XE MÁY</p>
@@ -288,12 +296,12 @@
               </div>
 
               <button data-ui-toggle="my-collapse-3"
-                class="flex justify-between items-center w-full p-3 border-b-[1px]">
+                class="flex tablet:text-sm justify-between items-center w-full p-3 border-b-[1px]">
                 ẮC QUY NỘI ĐỊA
                 <i class="fa-solid fa-angle-right"></i>
               </button>
               <div data-ui-collapse data-ui-transition-name="collapse" id="my-collapse-3" shown>
-                <div class="collapse-content p-4 border-b-[1px]">
+                <div class="collapse-content tablet:text-sm p-4 border-b-[1px]">
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS KHÔ</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS NƯỚC</p>
                   <p class="p-2 cursor-pointer hover:bg-[#E5E7EB] rounded">ẮC QUY GS XE MÁY</p>
@@ -307,14 +315,14 @@
           <!-- Category -->
 
           <!-- New Product -->
-          <div class="rounded border-[1px] w-full shadow-md">
+          <div class="rounded border-[1px] w-full shadow-md tablet:mb-10">
             <div class="text-[#8a4d04] bg-[#ffeea4] font-semibold border-b-[1px] px-4 py-3 text-center">
-              <p class="text-xl">SẢN PHẨM MỚI NHẤT</p>
+              <p class="text-xl tablet:text-lg">SẢN PHẨM MỚI NHẤT</p>
             </div>
             <div>
               <div onclick="navigate()"
                 class="flex items-center w-full gap-4 p-3 duration-150 bg-white border-b border-solid cursor-pointer hover:bg-gray-200">
-                <div class="flex-1">
+                <div class="flex-1 tablet:flex-none tablet:w-1/3">
                   <img class="border-[1px]" src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                 </div>
                 <div class="text-[#8a4d04]">
@@ -324,7 +332,7 @@
               </div>
               <div onclick="navigate()"
                 class="flex items-center w-full gap-4 p-3 duration-150 bg-white border-b border-solid cursor-pointer hover:bg-gray-200">
-                <div class="flex-1">
+                <div class="flex-1 tablet:flex-none tablet:w-1/3">
                   <img class="border-[1px]" src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                 </div>
                 <div class="text-[#8a4d04]">
@@ -334,7 +342,7 @@
               </div>
               <div onclick="navigate()"
                 class="flex items-center w-full gap-4 p-3 duration-150 bg-white border-b border-solid cursor-pointer hover:bg-gray-200">
-                <div class="flex-1">
+                <div class="flex-1 tablet:flex-none tablet:w-1/3">
                   <img class="border-[1px]" src="/src/assets/images/ẮC QUY SEBANG SMF 44B19L.jpg" alt="">
                 </div>
                 <div class="text-[#8a4d04]">
@@ -351,9 +359,9 @@
 
 
       <!-- Đối tác -->
-      <section class="max-w-[1500px] mx-auto mb-[3rem]">
+      <section class="max-w-[1500px] mx-auto mb-[3rem] px-[1rem]">
 
-        <div class="flex items-center justify-center w-1/2 gap-3 mx-auto mb-10 tablet:w-full">
+        <div class="flex items-center justify-center w-3/4 gap-3 mx-auto mb-10 tablet:w-full">
           <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
           <p class="text-[24px] tablet:text-lg text-[#8a4d04] text-center font-bold">ĐỐI TÁC</p>
           <img class="w-2/5" src="/src/assets/images/img-title.32428066.png" alt="">
@@ -410,14 +418,14 @@
           </div>
           <div class="max-w-[25%] flex-[0_0_25%] tablet:flex-1 tablet:max-w-full">
             <div class="w-4/5 mx-auto">
-              <h3 class="mb-4 text-[20px] text-sm text-white font-bold">DANH MỤC SẢN PHẨM</h3>
+              <h3 class="mb-4 text-[20px] desktop:text-lg text-xl tablet:text-sm text-white font-bold">DANH MỤC SẢN PHẨM</h3>
               <div id="categories">
                 <!-- Render by JS (/script/Footer.js) -->
               </div>
             </div>
           </div>
           <div class="tablet:hidden">
-            <h3 class="mb-4 text-[20px] text-white font-bold">BẢN ĐỒ</h3>
+            <h3 class="mb-4 text-[20px] desktop:text-lg text-white font-bold">BẢN ĐỒ</h3>
             <div class="flex flex-row wrap">
               <div class="flex h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
                 <img class="flex-1 object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">
@@ -434,7 +442,7 @@
 
         </div>
         <div class="hidden tablet:block">
-          <h3 class="mb-4 text-[20px] text-white font-bold">BẢN ĐỒ</h3>
+          <h3 class="mb-4 text-[20px] desktop:text-lg text-white font-bold">BẢN ĐỒ</h3>
           <div class="flex flex-row wrap">
             <div class="flex h-56 ant-col ant-col-xs-10 ant-col-sm-10 ant-col-md-10 ant-col-lg-8 css-txh9fw">
               <img class="flex-1 object-cover w-full h-full" src="/src/assets/images/imgHouse.bcd13c8f.jpg" alt="">

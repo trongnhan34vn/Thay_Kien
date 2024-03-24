@@ -17,8 +17,8 @@ const partners = [
 ]
 
 const renderPartner = (partner) => {
-  return `<li class="slider-item w-[375px] tablet:w-full">
-  <img class="w-full object-contain border-[1px] border-[#895609]" src="${partner.img}" alt="">
+  return `<li class="slider-item w-10/12tablet:w-full">
+  <img class="w-full object-contain block border-[1px] border-[#895609]" src="${partner.img}" alt="">
 </li>`;
 }
 

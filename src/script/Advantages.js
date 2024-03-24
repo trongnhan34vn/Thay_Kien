@@ -20,8 +20,8 @@ const advantages = [
 const renderAdvantage = (advantage, index) => {
   const isLast = index === advantages.length - 1;
   return `<div class="flex tablet:flex-col tablet:px-2 px-3 ${isLast ? "" : "border-r-[2px]"} border-[#895609] h-[75%] items-center justify-center w-[25%]">
-  <img class="mr-2 tablet:w-9 tablet:h-9 tablet:mb-2" src="${advantage.img}" alt="">
-  <p class="font-[500] tablet:text-xs tablet:text-center text-[1.25rem] text-[#8a4d04]">${advantage.title}</p>
+  <img class="mr-2 laptop:w-12 tablet:w-9 tablet:h-9 tablet:mb-2" src="${advantage.img}" alt="">
+  <p class="font-[500] tablet:text-xs desktop:text-lg laptop:text-sm text-center text-[1.25rem] text-[#8a4d04]">${advantage.title}</p>
 </div>`
 }
 

@@ -1,3 +1,3 @@
 function navigate () {
-  window.location.href="/product.html";
+  window.location.href="/src/pages/product.html";
 }
