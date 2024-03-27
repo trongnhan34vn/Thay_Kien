@@ -44,7 +44,7 @@ const categories = [
 ]
 
 const renderCategoryElement = (category) => {
-  return `<p class="text-white desktop:text-lg laptop:text-base text-[20px] tablet:text-sm mb-2">${category}</p>`
+  return `<p class="text-white text-left desktop:text-lg laptop:text-base text-[20px] tablet:text-sm mb-2">${category}</p>`
 }
 
 const renderCategories = () => {

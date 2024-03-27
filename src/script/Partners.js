@@ -16,8 +16,8 @@ const partners = [
   },
 ]
 
-const renderPartner = (partner) => {
-  return `<li class="slider-item w-10/12tablet:w-full">
+const renderPartner = (partner, index) => {
+  return `<li class="slider-item w-11/12 tablet:w-full">
   <img class="w-full object-contain block border-[1px] border-[#895609]" src="${partner.img}" alt="">
 </li>`;
 }
@@ -25,8 +25,8 @@ const renderPartner = (partner) => {
 const renderPartners = () => {
   let render = "";
   let partnersId = document.getElementById('partners');
-  partners.forEach(partner => {
-    render += renderPartner(partner);
+  partners.forEach((partner, index) => {
+    render += renderPartner(partner, index);
   });
   partnersId.innerHTML = render;
 }
