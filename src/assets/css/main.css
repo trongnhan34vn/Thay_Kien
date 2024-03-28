@@ -280,3 +280,11 @@ body {
    border-radius: 5px
   }
 }
+
+.strict-text {
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
