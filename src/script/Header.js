@@ -12,7 +12,7 @@ const routers = [
     link: "/src/pages/products.html",
   },
   {
-    title: "DỊCH VỤ",
+    title: "TIN TỨC",
     link: "/src/pages/services.html",
   },
   {
