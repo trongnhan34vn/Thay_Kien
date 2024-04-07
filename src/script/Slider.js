@@ -1,10 +1,10 @@
 var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + ' inline-block">' + "</span>";
-    },
+    // clickable: true,
+    // renderBullet: function (index, className) {
+    //   return '<span class="' + className + ' inline-block">' + "</span>";
+    // },
   },
   autoplay: {
     delay: 2000
@@ -16,6 +16,8 @@ const images = [
   { src: '/src/assets/images/banner_1.c41ce791.png' },
   { src: '/src/assets/images/banner_2.b9dca191.png' }
 ]
+
+console.log(swiper);
 
 const renderSlideItem = (image, index) => {
   return `<div class="swiper-slide">

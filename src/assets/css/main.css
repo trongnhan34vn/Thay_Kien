@@ -14,9 +14,9 @@ body {
  
 }
 
-.isSticky {
+/* .isSticky {
   animation: slideDown 0.35s ease-out;
-}
+} */
 
 #footer {
   background: linear-gradient(#f25d19,#fad327);
@@ -33,12 +33,7 @@ body {
   height: 100%;
 }
 
-@media (min-width: 375px) and (max-width: 570px) {
-  .swiper {
-    width: 100%;
-    height: 300px;
-  }
-}
+
 
 .swiper-slide {
   text-align: center;
@@ -55,6 +50,17 @@ body {
   width: 100%;
   height: 100%;
   object-fit: fill;
+}
+
+@media (min-width: 375px) and (max-width: 570px) {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    height: 300px !important;
+  }
 }
 
 #slider-container .swiper-pagination-bullet {
@@ -89,14 +95,14 @@ body {
   background: url('/src/assets/images/line-header-products.1d9fb39a.png') no-repeat 0;
 }
 
-@keyframes slideDown {
+/* @keyframes slideDown {
   from {
     transform: translateY(-100%);
   }
   to {
     transform: translateY(0);
   }
-}
+} */
 
 /* Infinite Slide */
 

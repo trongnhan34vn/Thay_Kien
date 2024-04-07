@@ -37,13 +37,14 @@
       }
     }
   </script>
+
 </head>
 
 <body>
   <div id="root">
     <!-- Header -->
     <header
-      class="transition-all duration-200 ease-in relative top-0 right-0 left-0 w-full max-h-[116px] tablet:max-h-full z-[9999]"
+      class="relative top-0 right-0 left-0 w-full max-h-[116px] tablet:max-h-full z-[9999]"
       id="header">
       <div class="absolute top-0 z-10 w-full h-full bg-white tablet:hidden"></div>
       <div
@@ -119,11 +120,12 @@
 
       <div class="px-[1rem] tablet:px-2">
         <!-- Advantages -->
-        <section id="advantages-container" class="max-w-[1500px] mx-auto mb-[3rem] tablet:mb-7">
+        <section id="advantages-container" class="max-w-[1500px] relative mx-auto mb-[3rem] tablet:mb-7">
           <div id="advantages"
             class="rounded s-phone:grid s-phone:grid-cols-2 s-phone:h-full !border-[1px] mx-auto bg-[#ffeea4] border-[#895609] laptop:h-24 w-full h-28 flex items-center">
             <!-- Render Advantage Items by JS (/script/Advantages.js) -->
           </div>
+          <div class="border-r-[1px] right-1/2 top-2/4 translate-y-[-50%] h-2/4 border-[#895609] absolute"></div>
         </section>
         <!-- Advantages -->
 
@@ -637,7 +639,7 @@
         <!-- <i id="show-icon" class="text-xl fa-solid fa-x"></i> -->
       </div>
       <div id="socials"
-        class="absolute bg-white bottom-[120%] shadow-xl h-0 transition-all duration-200 ease-in opacity-0 overflow-hidden flex flex-col justify-between w-14 rounded-[500px] px-2 py-4">
+        class="absolute bg-white bottom-[120%] shadow-xl h-[200px] transition-all duration-200 ease-in overflow-hidden flex flex-col justify-between w-14 rounded-[500px] px-2 py-4">
         <div class="cursor-pointer border-[1px] border-transparent hover:border-[#ccc] rounded-[100%] overflow-hidden">
           <img class="block" src="/src/assets/images/Icon_of_Zalo.svg.png" alt="">
         </div>
@@ -715,13 +717,14 @@
 
   <script type="module" src="/src/script/Header.js"></script>
   <script type="module" src="/src/script/Footer.js"></script>
-  <script type="module" src="/src/script/Slider.js"></script>
   <script type="module" src="/src/script/Advantages.js"></script>
   <script type="module" src="/src/script/Partners.js"></script>
   <script type="module" src="/src/script/infiniteSlider.js"></script>
   <script type="module" src="/src/script/tabs.js"></script>
   <script src="/src/script/social.js"></script>
   <script src="/src/script/product.js"></script>
+  <script src="/src/script/Slider.js"></script>
+
   <!-- <script type="text/tailwindcss" src="tailwind.config.js"></script> -->
 
   <script>

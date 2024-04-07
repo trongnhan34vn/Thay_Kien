@@ -55,7 +55,7 @@ routersRender();
 
 const setFixedHeader = () => {
   window.onscroll = () => {
-    let isFixedHeader = window.scrollY > 20;
+    let isFixedHeader = window.scrollY > 100;
     let headerId = document.getElementById('header');
     let containerId = document.getElementById('container');
     let containerClasslist = containerId.classList;
