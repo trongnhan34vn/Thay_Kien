@@ -62,11 +62,9 @@ const setFixedHeader = () => {
     let headerClasslist = headerId.classList;
     let windowWidth = window.innerWidth < 450;
     if (windowWidth && isFixedHeader) {
-      document.getElementById("logo").style.display = "none";
-      document.getElementById("hotline").style.display = "none";
+      document.getElementById("search").style.display = "none";
     } else {
-      document.getElementById("logo").style.display = "block";
-      document.getElementById("hotline").style.display = "flex";
+      document.getElementById("search").style.display = "flex";
     }
 
     if (!isFixedHeader) {

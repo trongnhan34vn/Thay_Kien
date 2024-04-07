@@ -6,6 +6,9 @@ var swiper = new Swiper(".mySwiper", {
       return '<span class="' + className + ' inline-block">' + "</span>";
     },
   },
+  autoplay: {
+    delay: 2000
+  }
 });
 const images = [
   { src: '/src/assets/images/banner_1.c41ce791.png' },
