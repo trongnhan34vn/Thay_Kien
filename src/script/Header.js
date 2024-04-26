@@ -1,25 +1,5 @@
 import { getCurrentUrl } from "../utils/utils.js";
-
-// const basicUrl = "http://127.0.0.1:5500/src/pages";
-
-const routers = [
-  {
-    title: "TRANG CHỦ",
-    link: "/",
-  },
-  {
-    title: "SẢN PHẨM",
-    link: "/src/pages/products.html",
-  },
-  {
-    title: "TIN TỨC",
-    link: "/src/pages/services.html",
-  },
-  {
-    title: "LIÊN HỆ",
-    link: "/src/pages/contact.html",
-  },
-]
+import { routes } from "../constant/constants.js";
 
 const routerRender = (router) => {
   if (!router) return 'Error No Router'
@@ -42,7 +22,7 @@ const routerRender = (router) => {
 
 const routersRender = () => {
   let render = '';
-  routers.forEach(router => {
+  routes.forEach(router => {
     render += routerRender(router);
   })
   const routersId = document.getElementById('routers');
@@ -61,11 +41,11 @@ const setFixedHeader = () => {
     let containerClasslist = containerId.classList;
     let headerClasslist = headerId.classList;
     let windowWidth = window.innerWidth < 450;
-    if (windowWidth && isFixedHeader) {
-      document.getElementById("search").style.display = "none";
-    } else {
-      document.getElementById("search").style.display = "flex";
-    }
+    // if (windowWidth && isFixedHeader) {
+    //   document.getElementById("search").style.display = "none";
+    // } else {
+    //   document.getElementById("search").style.display = "flex";
+    // }
 
     if (!isFixedHeader) {
       headerClasslist.replace('fixed', 'relative');

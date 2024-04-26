@@ -39,3 +39,22 @@ export const locationIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" 
   </clipPath>
 </defs>
 </svg>`
+
+export const routes = [
+  {
+    title: "TRANG CHỦ",
+    link: "/",
+  },
+  {
+    title: "SẢN PHẨM",
+    link: "/src/pages/products.html",
+  },
+  {
+    title: "TIN TỨC",
+    link: "/src/pages/services.html",
+  },
+  {
+    title: "LIÊN HỆ",
+    link: "/src/pages/contact.html",
+  },
+]
